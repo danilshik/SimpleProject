@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test Application</string>
+    <string name="title_locations">Локации</string>
+    <string name="title_persons">Персонажи</string>
+    <string name="title_episods">Эпизоды</string>
+    <string name="error">Ошибка</string>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_location_list">
+
+    <fragment
+        android:id="@+id/nav_location_list"
+        android:name="com.example.simpleproject.ui.location_list.LocationListFragment"
+        android:label="Список локаций">
+        <action
+            android:id="@+id/action_to_location_detail"
+            app:destination="@id/nav_location_detail">
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_episod_list"
+        android:name="com.example.simpleproject.ui.episode_list.EpisodeListFragment"
+        android:label="Список эпизодов">
+
+        <action
+            android:id="@+id/action_to_episod_detail"
+            app:destination="@id/nav_episod_detail"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_character_list"
+        android:name="com.example.simpleproject.ui.character_list.CharacterListFragment"
+        android:label="Список персонажей">
+
+        <action
+            android:id="@+id/action_to_character_detail"
+            app:destination="@id/nav_character_detail">
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_location_detail"
+        android:name="com.example.simpleproject.ui.location_detail.LocationDetailFragment"
+        android:label="Локация">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="dimension"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_character_detail"
+        android:name="com.example.simpleproject.ui.character_detail.CharacterDetailFragment"
+        android:label="Персонаж">
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+        <argument
+            android:name="gender"
+            app:argType="string" />
+
+        <argument
+            android:name="species"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+
+        <argument
+            android:name="image"
+            app:argType="string" />
+
+        <argument
+            android:name="location"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_episod_detail"
+        android:name="com.example.simpleproject.ui.episode_detail.EpisodeDetailFragment"
+        android:label="Эпизод">
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+        <argument
+            android:name="air_date"
+            app:argType="string" />
+
+        <argument
+            android:name="episod"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+
+</navigation>
